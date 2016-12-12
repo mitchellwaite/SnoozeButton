@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import MediaPlayer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var idleTimerDisabled = false;
+    var volumeValue:Float = 0.0;
+    var brightValue:Float = 0.0;
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -27,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        UIApplication.shared.isIdleTimerDisabled = idleTimerDisabled;
+        let volumeView = MPVolumeView()
+        if let view = volumeView.subviews.first as? UISlider
+        {
+            view.value = volumeValue;   // set b/w 0 t0 1.0
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -35,6 +45,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        //Save old idle timer value
+        idleTimerDisabled = UIApplication.shared.isIdleTimerDisabled;
+        UIApplication.shared.isIdleTimerDisabled = true;
+        
+        //Save old volume value, set to maximum
+        volumeValue = AVAudioSession.sharedInstance().outputVolume;
+        
+        let volumeView = MPVolumeView()
+        if let view = volumeView.subviews.first as? UISlider
+        {
+            view.value = 1.0;   // set b/w 0 t0 1.0
+        }
+        
+        //Set brightness to minimum
+        brightValue = Float(UIScreen.main.brightness);
+        //UIScreen.main.brightness = CGFloat(0);
+        
+        print("Old volume value: ", volumeValue );
+        print("Old brigtness value: ", brightValue);
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
