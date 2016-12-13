@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I0c-mz-xw8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I0c-mz-xw8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKj-Cf-w1P">
-                                <rect key="frame" x="0.0" y="365" width="375" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKj-Cf-w1P">
+                                <rect key="frame" x="28" y="365" width="320" height="216"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="474292800.98733801">
@@ -52,8 +52,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0h 0m 0s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nam-fq-mxY">
-                                <rect key="frame" x="16" y="170" width="343" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00h 00m 00s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nam-fq-mxY">
+                                <rect key="frame" x="16" y="170" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -64,13 +64,13 @@
                             <constraint firstItem="Wng-Gw-tss" firstAttribute="top" secondItem="4Xb-cs-7WQ" secondAttribute="bottom" constant="8" id="2P6-mD-7ai"/>
                             <constraint firstItem="qya-kv-6ey" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="5eA-GA-RMZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Wng-Gw-tss" secondAttribute="trailing" id="9eV-WL-RUU"/>
+                            <constraint firstItem="vKj-Cf-w1P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C0l-7b-b6N"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qya-kv-6ey" secondAttribute="leading" id="Cvm-7h-eGU"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Wng-Gw-tss" secondAttribute="leading" id="GwX-3U-sZy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wng-Gw-tss" secondAttribute="bottom" constant="10" id="H0w-c2-rz7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="nam-fq-mxY" secondAttribute="leading" id="P2E-ed-Y31"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nam-fq-mxY" secondAttribute="trailing" id="Sa5-U8-pq0"/>
                             <constraint firstItem="4Xb-cs-7WQ" firstAttribute="top" secondItem="vKj-Cf-w1P" secondAttribute="bottom" constant="8" id="a3B-Ug-bxB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vKj-Cf-w1P" secondAttribute="trailing" constant="-16" id="b7W-32-vLf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="4Xb-cs-7WQ" secondAttribute="leading" id="c0s-vn-X8o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Xb-cs-7WQ" secondAttribute="trailing" id="kuB-Qh-3UL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qya-kv-6ey" secondAttribute="trailing" id="o4o-6K-Dgu"/>
@@ -85,14 +85,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="36.431784107946029"/>
+            <point key="canvasLocation" x="963.5" y="35.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VZw-fH-obM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I0c-mz-xw8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="HhK-3r-tll">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="HhK-3r-tll">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
